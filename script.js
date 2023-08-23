@@ -28,13 +28,17 @@ const player2ChoiceTxt = document.querySelector('.player__choice--2');
 let player1Choice, player2Choice, scores, result, round;
 
 // Event Listener for Button Clicks
-buttons.forEach(button => button.addEventListener("click", makeChoice));
+document.querySelector('.player__choice').addEventListener("click", (e) => {
+    if (e.target && e.target.matches(".player__choice-btn")) {
+        makeChoice(e.target.id);
+    }
+});
 
 // Function to Handle Player Choice and Evaluate Round
 function makeChoice(e) {
     roundTxt.innerText = `Round ${round}`;
-    player1Choice = options[e.target.id];
-    playerStatus.innerText = `You chose ${e.target.id}`;
+    player1Choice = options[e];
+    playerStatus.innerText = `You chose ${e}`;
     player2Play();
     evaluate();
 }
