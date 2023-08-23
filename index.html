@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <main class="app">
         <h2 class="round">Round 1</h2> <!-- This must be interactive -->
         <section class="playground">
             <div class="player player--1">
-                <div class="player__score">
+                <div class="player__score-container">
                     <h3 class="player__score-title">Your score</h3>
-                    <div class="player__stars"></div>
+                    <div class="player__score">0</div>
                 </div>
                 <div class="player__choice">
-                    <button class="player__choice-btn">Rock</button>
-                    <button class="player__choice-btn">Scissors</button>
-                    <button class="player__choice-btn">Paper</button>
+                    <button class="player__choice-btn player__choice-btn--rock" id="rock">Rock</button>
+                    <button class="player__choice-btn player__choice-btn--paper" id="paper">Paper</button>
+                    <button class="player__choice-btn player__choice-btn--scissors" id="scissors">Scissors</button>
                 </div>
                 <div class="player__status">
-                    <p class="player__status-txt">You made a choice</p>
+                    <p class="player__status-txt"></p>
                 </div>
             </div>
             <div class="player player--2">
-                <div class="player__score">
-                    <h3 class="player__score-title">Your score</h3>
-                    <div class="player__stars"></div>
+                <div class="player__score-container">
+                    <h3 class="player__score-title">Rival Score</h3>
+                    <div class="player__score">0</div>
                 </div>
-                <div class="player__choice">
-                    <button class="player__choice-btn">Rock</button>
-                    <button class="player__choice-btn">Scissors</button>
-                    <button class="player__choice-btn">Paper</button>
+                <div class="player__choice-container">
+                    <p class="player__choice player__choice--2">Rock</p>
                 </div>
                 <div class="player__status">
-                    <p class="player__status-txt">You made a choice</p>
+                    <p class="player__status-txt"></p>
                 </div>
             </div>
         </section>
-        <div class="result">You lose</div>
+        <div class="result"></div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
